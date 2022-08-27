@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scroll Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="birds.png" id="birds" />
+      <img src="sun.png" id="sun" />
+      <img src="hills_behind.png" id="hills_behind" />
+
+      <img src="bamboo_behind.png" id="bamboo_behind" />
+      <a href="#sec" id="btn">Explore</a>
+      <img src="bamboo_front.png" id="bamboo_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Description</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quae
+        ipsum voluptatem earum neque facere, suscipit ratione non quod quasi
+        perferendis asperiores, dignissimos quisquam iusto, labore eveniet!
+        Minus tempore facere, sed, in nam illo aliquid maiores, explicabo velit
+        est atque suscipit nobis necessitatibus eum quos et maxime corrupti ea
+        ratione earum quis quisquam? Dicta ducimus delectus aliquam pariatur ut
+        quia minima porro ullam molestiae iste! Odit magnam, corrupti aperiam
+        laborum aliquid pariatur modi vel quasi atque quae quo, nemo quisquam
+        repellat veniam error non aut. Fugit, voluptatem hic molestias soluta
+        exercitationem ad voluptas, quaerat et obcaecati ipsam vel non debitis
+        pariatur consectetur, dolore dolorem quo deserunt dolor nihil laborum
+        illum. <br /><br />
+
+        Enim necessitatibus rerum ex voluptates veritatis delectus earum neque
+        dolorem recusandae cum voluptatibus soluta a, facere, impedit
+        asperiores. Sit consequatur assumenda reiciendis culpa esse ipsa sint
+        error dicta voluptates nobis harum, autem earum quae nulla odio
+        doloribus nihil, perspiciatis provident quam at sed dolore libero minima
+        laborum? Vero eius natus magni repudiandae dolore aut quam et delectus
+        facere pariatur aliquid amet, soluta temporibus repellat consectetur
+        quos? Dolorem, vero obcaecati quam cum sequi iure tempore minima eaque
+        voluptatum et nisi quo repellendus numquam quae in esse nobis ipsum?
+        Quis debitis perspiciatis iste architecto suscipit, illo quas, id ex hic
+        quibusdam commodi laudantium illum ad deserunt magni adipisci iure!
+        Inventore atque sapiente excepturi aspernatur aliquam veniam vero minus
+        tempore praesentium pariatur laudantium, ab non repudiandae eos rerum,
+        laborum tempora, dolorem deserunt. Cumque ea rem nemo libero voluptates
+        animi, iste sapiente harum quisquam eveniet, impedit dolorem quidem
+        voluptatibus saepe mollitia? Iure numquam ex, incidunt reiciendis vel
+        ipsa dolore possimus accusamus iste nesciunt alias veniam! Aliquid
+        corporis optio voluptates, expedita, dicta harum, veritatis tenetur
+        consequatur odit deserunt reiciendis. Saepe, neque architecto assumenda
+        quibusdam beatae vel? Aliquam vitae commodi atque incidunt ipsa corporis
+        reprehenderit exercitationem nisi obcaecati voluptatum, cumque, amet
+        mollitia repellat?
+        <br /><br />
+        Dolorum nam rerum fugit explicabo, animi necessitatibus quasi cumque
+        quas dolor magni totam suscipit! Iure in itaque cumque quaerat mollitia
+        iste minus vitae maiores reprehenderit deleniti? Temporibus, recusandae
+        sint tempora quidem repudiandae unde optio facere aliquid illum animi
+        necessitatibus beatae, aperiam reiciendis. Fugit natus autem cum alias
+        maiores sapiente. Officiis quisquam, quod saepe unde quo odit!
+        Laboriosam eaque, culpa maiores quo vitae molestias unde impedit
+        similique doloribus aspernatur officiis, dolor non recusandae rem
+        expedita sed fugiat consectetur animi molestiae ipsam ducimus! Pariatur
+        libero voluptas voluptates harum, adipisci excepturi eius accusantium
+        obcaecati porro at cum dolorum voluptatem aliquid in! Quod similique
+        autem pariatur aliquam iure excepturi perspiciatis, necessitatibus earum
+        repudiandae officiis aut ipsum distinctio mollitia eligendi quis quos,
+        laudantium architecto reprehenderit vitae suscipit odio corporis!
+        Dolorem, quisquam nesciunt. Aspernatur non ut soluta nihil
+        exercitationem! Pariatur consequatur soluta voluptatum harum, doloribus
+        voluptatibus laudantium animi expedita magni ipsa, hic suscipit ipsum
+        tenetur quis eveniet culpa est. Voluptas nulla odio deserunt vitae
+        neque, esse dolore nobis repudiandae saepe, atque voluptates velit,
+        sapiente voluptate ut aperiam libero non. Assumenda debitis similique
+        harum ratione et quos eligendi, dolorum tenetur esse laboriosam?
+        Corporis, veritatis sit quos ad itaque beatae nobis.
+      </p>
+    </div>
+    <script>
+      let birds = document.getElementById("birds");
+      let sun = document.getElementById("sun");
+      let hills_behind = document.getElementById("hills_behind");
+      let bamboo_behind = document.getElementById("bamboo_behind");
+      let btn = document.getElementById("btn");
+      let bamboo_front = document.getElementById("bamboo_front");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        birds.style.left = value * 1.5 + "px";
+        birds.style.marginTop = value * 0.25 + "px";
+        sun.style.top = value * 1.05 + "px";
+        hills_behind.style.top = value * 0.5 + "px";
+        bamboo_front.style.left = value * 0.25 + "px";
+        bamboo_behind.style.left = value * -0.2 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
